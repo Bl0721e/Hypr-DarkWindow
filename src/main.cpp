@@ -48,7 +48,7 @@ void hkSurfacePassDraw(CSurfacePassElement* thisptr, const CRegion& damage) {
         auto shader = g_WindowShader.OnRenderWindowPre(thisptr->m_data.pWindow);
         if (shader && (*shader)->Transparent == IntroducesTransparency::Yes) {
             // TODO: undo these changes?
-            thisptr->m_data.blur = true;
+            //thisptr->m_data.blur = true;
             if (thisptr->m_data.texture) thisptr->m_data.texture->m_opaque = false;
             if (thisptr->m_data.surface && !thisptr->m_data.surface->m_current.opaque.empty())
             {
